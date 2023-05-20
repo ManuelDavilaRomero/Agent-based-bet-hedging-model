@@ -7,7 +7,7 @@ Aunque los códigos están comentados para facilitar su compresión, conviene ha
 
 -Para obtener las trayectorias de la sección 4.1 descomentamos en modeloagentesconextincion Trayectorias, que ejecuta fluctuating_environments 100 veces para distintos valores de las constantes de cambio de fenotipo.
 
--Para el análisis de la distribución del logaritmo de la población de la sección 4.2, descomentamos en modeloagenteslogaritmos Análisis del logaritmo de la población. Se calcula entonces la distribución del logaritmo de la población a 3 tiempos diferentes y, con el uso de una libraría, se ajusta una gaussiana para cada uno de ellos.
+-Para el análisis de la distribución del logaritmo de la población de la sección 4.2, descomentamos en modeloagenteslogaritmos Análisis del logaritmo de la población. Se calcula entonces la distribución del logaritmo de la población a 3 tiempos diferentes y, con el uso de una librería, se ajusta una gaussiana para cada uno de ellos.
 
 -Para la extinción de la sección 4.3 descomentamos en el primer programa Extinción simple, si solo nos interesa un punto concreto, o Mapa de extinción, si lo que deseamos es reproducir figuras como la 5 o la 6. Como se desarrolla en la memoria, la probabilidad de extinción es el cociente entre el número de poblaciones que se extinguen y el número total de simulaciones, por lo que estos comandos básicamente ejecutan varias veces fluctuating_environments y almacenan cuántas trayectorias se absorben.
 
