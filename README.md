@@ -1,16 +1,21 @@
-# TFG-Creciendo-y-evolucionando-en-ambientes-fluctuantes
-Los programas incluidos en este repositorio han sido desarrollados como parte del TFG Creciendo y evolucionado en ambientes fluctuantes para el grado de Físicas de la UCM. El autor íntegro ha sido el alumno Manuel Dávila Romero, ayudado por los consejos de los dos supervisores del TFG Luis Dinis y Francisco J. Cao.
+# Estrategias óptimas en ambientes fluctuantes/ Extinction in agent-based and collective models of bet-heding 
 
-Se ha usado el lenguaje de programación Python en su versión 3.7.9, con ayuda del entorno de Spyder en un ordenador MSI GL63 8RD con procesador Intel(R) Core(TM) i7-8750.
+Español 
 
-Aunque los códigos están comentados para facilitar su compresión, conviene hacer algunas anotaciones generales. El modeloagentesconextincion es el programa con cálculo de probabilidad de extinción, mientras que modeloagenteslogaritmos se centra en el estudio de propiedades del logaritmo de la población. Finalmente, el programa modeloagentesprimerapasada se ha utilizado para calcular el tiempo de primera pasada. Los códigos están formados por una serie de funciones, que modelizan la situación presentada en la sección 3.1 de la memoria del TFG. La función principal en todos ellos se denomina fluctuating_environments y calcula los cambios de ambiente y fenotipo, así como el crecimiento de la población. Al final del código, aparecen comentados los comandos que permiten reproducir los resultados presentados. 
+Las simulaciones se han desarrollado usando el lenguaje de programación de *Python* en su versión 3.7.9 y 3.8.10, con ayuda del entorno de *Spyder* usando principalmente un Legion 5 15IAH7H Laptop (Lenovo) - Type 82RB con procesador 12th Gen Intel(R) Core(TM) i7-12700H   2.30 GHz. 
 
--Para obtener las trayectorias de la sección 4.1 descomentamos en modeloagentesconextincion Trayectorias, que ejecuta fluctuating_environments 100 veces para distintos valores de las constantes de cambio de fenotipo.
+Los tres programas tienen una parte común. Incluyen tres funciones encargadas de generar  los números aleatorios necesarios para los procesos de cambio de ambiente (**cambio_ambiente**, reproducción/muerte  (**reproduccion_muerte_bacteria**) y el cambio de fenotipo (**cambio_fenotipo**). Para calcular el paso temporal de la simulación y ejecutar estos programas en cada paso, se crea la función principal **fluacting_environments**. Los resultados presentados en el trabajo se incluyen como *scripts* que basta descomentar para reproducibilidad.
+- **agentmodelextinction**. Este programa utiliza la cota superior. Se utiliza para calcular la probabilidad de extinción, tanto de puntos aislados como mapas de extinción. 
+- **agentmodelfirstpassagetime**. Se centra en el estudio de los tiempos de primera pasada, por lo que utiliza el logaritmo de la población.
+- **agentmodellogarithm**. El análisis de las trayectorias de la Sección 4.1 se realiza con este programa. No incluye la cota superior, pues en caso contrario, la distribución de las trayectorias no sería correcta. 
 
--Para el análisis de la distribución del logaritmo de la población de la sección 4.2, descomentamos en modeloagenteslogaritmos Análisis del logaritmo de la población. Se calcula entonces la distribución del logaritmo de la población a 3 tiempos diferentes y, con el uso de una librería, se ajusta una gaussiana para cada uno de ellos.
+English 
 
--Para la extinción de la sección 4.3 descomentamos en el primer programa Extinción simple, si solo nos interesa un punto concreto, o Mapa de extinción, si lo que deseamos es reproducir figuras como la 5 o la 6. Como se desarrolla en la memoria, la probabilidad de extinción es el cociente entre el número de poblaciones que se extinguen y el número total de simulaciones, por lo que estos comandos básicamente ejecutan varias veces fluctuating_environments y almacenan cuántas trayectorias se absorben.
+The simulations have been developed using the Python programming language in its versions 3.7.9 and 3.8.10, with the assistance of the Spyder environment, primarily running on a Legion 5 15IAH7H Laptop (Lenovo) - Type 82RB with a 12th Gen Intel(R) Core(TM) i7-12700H 2.30 GHz processor.
 
--Para el análisis teórico de la sección 4.4 ya hemos mencionado que modeloagentesprimerapasada es el programa que debemos usar para el estudio del tiempo de primera pasada. Si lo que nos interesa es la función de supervivencia o extinción teóricas recurrimos a modeloagenteslogaritmos y descomentamos Cálculo de la probabilidad de extinción teórica.
+All three programs share a common part. They include three functions responsible for generating the random numbers necessary for the processes of environmental change (**environment_change**), reproduction/death (**reproduction_death_bacteria**), and phenotype change (**phenotype_change**). To calculate the time step of the simulation and execute these programs at each step, the main function **fluacting_environments** is created. The results presented in the paper are included as scripts that only need to be uncommented for reproducibility.
 
--Para estudiar la trayectoria en el plano (ln(n_A),ln(n_B)) como se hace en la sección 4.5, basta descomentar Trayectorias en modeloagenteslogaritmos.
+- **agentmodelextinction**. This program utilizes the upper bound. It is used to calculate the probability of extinction, both for isolated points and extinction maps.
+- **agentmodelfirstpassagetime**. It focuses on studying the first passage times, thus utilizing the logarithm of the population.
+- **agentmodellogarithm**. The analysis of trajectories from Section \ref{agent trajectories} is performed with this program. It does not include the upper bound because otherwise, the distribution of trajectories would not be correct.
+
