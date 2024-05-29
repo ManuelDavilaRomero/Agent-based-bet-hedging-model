@@ -16,7 +16,7 @@ import pickle
 #This is the main function.
 def fluacting_environments(entornos,n_A,n_B,kappa_0_to_1,kappa_1_to_0,k_A,k_B,pi_A_to_B,pi_B_to_A):
     #Definition of delta t.
-    delta_t=abs(1000**(-1)*min(1/kappa_0_to_1,1/kappa_1_to_0,1/k_A[0],1/k_A[1],1/k_B[0],1/k_B[1],1/pi_A_to_B,1/pi_B_to_A))
+    delta_t=100**(-1)*min(1/kappa_0_to_1,1/kappa_1_to_0,1/abs(k_A[0]),1/abs(k_A[1]),1/abs(k_B[0]),1/abs(k_B[1]),1/pi_A_to_B,1/pi_B_to_A)
     #Time defines the number of iterations.
     tiempo=np.arange(delta_t,1000,delta_t)
     #Logarithm of the initial population. 
